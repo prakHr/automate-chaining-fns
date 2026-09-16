@@ -10,8 +10,8 @@ from funchain import chain
 def automate_chain_fns(list_of_str_functions, initial_state):
     functions = [globals()[fn_name] for fn_name in list_of_str_functions]
     fun = chain(*functions)
-    return fun(initial_state)
-
+    results = fun(initial_state)
+    return results
 
 # if __name__ == "__main__":
 #     list_of_str_functions = ["add_two","double","add_two","add_two","add_two"]
