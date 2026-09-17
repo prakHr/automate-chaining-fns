@@ -9,8 +9,8 @@ from funchain import chain
 
 def automate_chain_fns(list_of_str_functions, initial_state):
     functions = [globals()[fn_name] for fn_name in list_of_str_functions]
-    fun = chain(*functions)
-    final_state = fun(initial_state)
+    fn = chain(*functions)
+    final_state = fn(initial_state)
     return final_state
 
 # if __name__ == "__main__":
